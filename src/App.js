@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Shop from "./components/Shop";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import React from "react";
+import Home from "./components/Home";
+import { useSelector } from "react-redux";
 
 function App() {
+  const data = useSelector((state) => state);
+  console.log(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav />
+
+      <Switch>
+        <Route path={"/"} exact component={Home} />
+        <Route path={"/about"} exact component={About} />
+        <Route path={"/shop"} exact component={Shop} />
+        <Route path={"/shop/:id"} exact component={ShopItem} />
+        <Redirect path="*" to="/" />
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
+
+const ShopItem = () => {
+  return <div>{JSON.stringify(window.location.pathname)}</div>;
+};
