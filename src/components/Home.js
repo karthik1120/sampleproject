@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import styled from "styled-components";
 import "../App.css";
+import TypedContext from "./TypedContext";
 
 const SpinningLoader = styled.div`
   padding-top: 40px;
@@ -29,13 +30,14 @@ const Home = () => {
       let data = await fetch(
         "https://jsonplaceholder.typicode.com/posts"
       ).then((res) => res.json());
-      // console.log("emptyarra", emptyArray);
       setemptyArray(data);
-      console.log(data);
+      // console.log(data);
     }, 5000);
   }, []);
+
   return (
     <div>
+      <TypedContext />
       <div className="grid">
         {emptyArray.map((data, ind) => (
           <div class="card" key={ind}>

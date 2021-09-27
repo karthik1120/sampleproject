@@ -11,6 +11,7 @@ import {
 import React from "react";
 import Home from "./components/Home";
 import { useSelector } from "react-redux";
+import { ScroolToTop } from "./components/ScroolToTop";
 
 function App() {
   const data = useSelector((state) => state);
@@ -18,7 +19,7 @@ function App() {
   return (
     <Router>
       <Nav />
-
+      <ScroolToTop />
       <Switch>
         <Route path={"/"} exact component={Home} />
         <Route path={"/about"} exact component={About} />
