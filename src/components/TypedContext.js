@@ -16,10 +16,10 @@ const StyledCursor = styled.span`
 `;
 
 const superpower = [
-  "logical thinking ",
-  "Developing ",
-  "Playing ",
-  "entrepreneurship ",
+  "logical thinking",
+  "Developing",
+  "Playing",
+  "entrepreneurship",
 ];
 const Phase = {
   TYPING: "TYPING",

@@ -2,16 +2,12 @@ import React, { useState, useEffect, Fragment } from "react";
 import styled, { keyframes } from "styled-components";
 
 const Blink = keyframes`
-
-
 0%{
     opacity: 0;
 }
-
 100%{
     opacity: 1;
 }
-
 `;
 
 const StyledButton = styled.div`
