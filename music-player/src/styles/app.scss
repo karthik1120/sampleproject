@@ -1,0 +1,39 @@
+.music-player {
+  padding: 0;
+  margin-top: 30px;
+  width: 50%;
+  user-select: none;
+
+  img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin: 10px;
+    animation: audio-img-spin infinite 20s linear;
+  }
+}
+
+.app-player {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input[type='range'] {
+  width: 50%;
+  height: 8px;
+  margin: 50px 0px;
+  border: none;
+  outline: none;
+}
+
+@keyframes audio-img-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import './library';

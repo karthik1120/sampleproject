@@ -1,5 +1,38 @@
+/* body {
+  background: black;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 400;
+  position: relative;
+  color: white;
+}
+body:after {
+  top: -150px;
+  right: -50px;
+  height: 600px;
+  transform: rotate(-30deg);
+}
+body:after,
+body:before {
+  position: fixed;
+  bottom: 0;
+  content: '';
+  width: 400px;
+  border: 2px solid rgb(255, 0, 0);
+  z-index: -1;
+}
+body:before {
+  top: 500px;
+  left: -100px;
+  height: 400px;
+  transform: rotate(20deg);
+} */
+
 .App {
   text-align: center;
+  text-transform: capitalize;
+  display: grid;
+  place-items: center;
 }
 
 .App-logo {

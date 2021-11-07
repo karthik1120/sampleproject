@@ -1,0 +1,68 @@
+.library-button {
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px 15px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+
+.my-library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22rem;
+  height: 100%;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 50px rgb(184, 184, 184);
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+  opacity: 0;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.library-songs {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // > div {
+  //   padding: 2rem;
+  // }
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.single-song {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  > div {
+    padding-left: 30px;
+  }
+  &:hover {
+    background-color: rgb(222, 222, 255);
+  }
+}
+
+.song-active {
+  background-color: #9595ff;
+  &:hover {
+    background-color: #7c7cff;
+  }
+}
+// #9595ff// selected songs
